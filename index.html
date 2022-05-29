@@ -55,6 +55,8 @@
             function objects_in_front() {
                     geo_json_1630d88349b83768c08e136be58c8351.bringToFront();
                     geo_json_6075cd852308738a19b8ac6d6bc3200b.bringToFront();
+                    geo_json_1630d88349b83768c08e136be58c8351.bringToFront();
+                    geo_json_6075cd852308738a19b8ac6d6bc3200b.bringToFront();
             };
             map_5e100cff1af796880df260c0a3c8d6e9.on("overlayadd", objects_in_front);
             $(document).ready(objects_in_front);
@@ -144,6 +146,26 @@
             L.control.layers(
                 layer_control_7b9c5f2528aeb3678bfb624f9452c134.base_layers,
                 layer_control_7b9c5f2528aeb3678bfb624f9452c134.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_5e100cff1af796880df260c0a3c8d6e9);
+            tile_layer_ece77eeb3ea540313637a2d6db0c3ec7.remove();
+            tile_layer_defef26220849d890e4ca3a287babbbd.remove();
+            tile_layer_38062058056fd7fb78794181d42fea17.remove();
+        
+    
+            var layer_control_427023ccdd0d74a0460eea02101fc1fc = {
+                base_layers : {
+                    "Google Maps" : tile_layer_38062058056fd7fb78794181d42fea17,
+                    "Google Satellite" : tile_layer_ece77eeb3ea540313637a2d6db0c3ec7,
+                    "Google Hybrid" : tile_layer_defef26220849d890e4ca3a287babbbd,
+                },
+                overlays :  {
+                    "County Border" : geo_json_6075cd852308738a19b8ac6d6bc3200b,
+                },
+            };
+            L.control.layers(
+                layer_control_427023ccdd0d74a0460eea02101fc1fc.base_layers,
+                layer_control_427023ccdd0d74a0460eea02101fc1fc.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
             ).addTo(map_5e100cff1af796880df260c0a3c8d6e9);
             tile_layer_ece77eeb3ea540313637a2d6db0c3ec7.remove();
